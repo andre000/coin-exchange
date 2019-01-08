@@ -6,26 +6,33 @@
   "scripts": {
     "build": "webpack -p",
     "watch": "webpack-dev-server",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "test:tdd": "jest --watch"
   },
   "author": "Andre L. Adriano",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
     "@babel/preset-env": "^7.2.3",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.5",
     "eslint": "^5.3.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.2",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.12.3",
     "jest": "^23.6.0",
+    "regenerator-runtime": "^0.13.1",
     "undefined": "^0.1.0",
     "webpack": "^4.28.1",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "chalk": "^2.4.2",
     "inquirer": "^6.2.1"
   }

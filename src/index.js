@@ -1,1 +1,3 @@
-import chalk from "chalk";
+import { MainConsole } from './components';
+
+MainConsole.start();
