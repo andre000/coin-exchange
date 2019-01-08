@@ -1,0 +1,32 @@
+{
+  "name": "coin-exchange",
+  "version": "0.0.1",
+  "description": "An project made as an assignment for a TDD course.",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "webpack -p",
+    "watch": "webpack-dev-server",
+    "test": "jest --coverage"
+  },
+  "author": "Andre L. Adriano",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.3",
+    "jest": "^23.6.0",
+    "undefined": "^0.1.0",
+    "webpack": "^4.28.1",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "inquirer": "^6.2.1"
+  }
+}
