@@ -1,5 +1,19 @@
+import dotenv from 'dotenv';
 import { create } from 'axios';
 
-export default () => create({
-  baseURL: 'localhost',
-});
+dotenv.config();
+
+export default (type) => {
+  switch (type) {
+    case 'CurrencyStack':
+      return create({
+        baseURL: 'https://api.currencystack.io/currency',
+        params: {
+          apikey: process.env.CURRENCYSTACK_API,
+        },
+      });
+
+    default:
+      throw new Error('Not Implemented');
+  }
+};
