@@ -1,3 +1,4 @@
-import { MainConsole } from './components';
+import { MainConsole, CoinExchange } from './components';
 
-MainConsole.start();
+global.MainConsole = MainConsole;
+global.CoinExchange = CoinExchange;
