@@ -1,4 +1,4 @@
-import { MainConsole, CoinExchange } from './components';
+import { MainConsole } from './components';
 
-global.MainConsole = MainConsole;
-global.CoinExchange = CoinExchange;
+const c = new MainConsole();
+c.start();

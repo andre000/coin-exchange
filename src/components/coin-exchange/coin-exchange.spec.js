@@ -151,4 +151,24 @@ describe('CoinExchange Class', () => {
     expect(coin.api.cryptonator.get.mock.calls).toEqual([['BTC-USD']]);
     expect(result).toBe(mockedResult.data.ticker.price);
   });
+
+  it('should throw an execption when the crypto API fails', async () => {
+    const mockedResult = {
+      data: {
+        success: false,
+        error: 'Error',
+      },
+    };
+
+    const coin = new CoinExchange({
+      from: 'BTC',
+      to: 'USD',
+    });
+
+    coin.api.cryptonator = {
+      get: jest.fn().mockResolvedValue(mockedResult),
+    };
+
+    expect(coin.exchangeCrypto()).rejects.toThrow(/Cryptonator:/);
+  });
 });

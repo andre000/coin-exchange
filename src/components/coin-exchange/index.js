@@ -59,6 +59,10 @@ class CoinExchange {
 
   async exchangeCrypto() {
     const { data } = await this.api.cryptonator.get(`${this.from}-${this.to}`);
+    if (!data.success) {
+      throw new Error(`Cryptonator: ${data.error}`);
+    }
+
     return data.ticker.price;
   }
 }
