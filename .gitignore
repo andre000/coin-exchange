@@ -425,4 +425,5 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 
-# End of https://www.gitignore.io/api/node,visualstudio
+# Contains API Keys
+dist/**

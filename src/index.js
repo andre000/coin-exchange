@@ -1,3 +1,4 @@
 import { MainConsole } from './components';
 
-MainConsole.start();
+const c = new MainConsole();
+c.start();
