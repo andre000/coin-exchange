@@ -1,6 +1,6 @@
 {
   "name": "coin-exchange",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "An project made as an assignment for a TDD course.",
   "main": "dist/main.js",
   "scripts": {
