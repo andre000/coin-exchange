@@ -66,6 +66,7 @@ class MainConsole {
       console.log('\n');
       console.log(MainConsole.result(fResult));
     }).catch((err) => {
+      console.log(err);
       console.error(MainConsole.title(err.message));
     });
   }

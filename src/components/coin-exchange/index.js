@@ -1,5 +1,8 @@
+import dotenv from 'dotenv';
 import createInterface from '../interface';
 import avaiableCoins from './currency';
+
+dotenv.config();
 
 class CoinExchange {
   constructor({ from, to, value = 1 }) {
@@ -53,7 +56,14 @@ class CoinExchange {
   }
 
   async exchangeCoin() {
-    const { data } = await this.api.currencyStack.get('', { params: { base: this.from, target: this.to } });
+    const { data } = await this.api.currencyStack.get('', {
+      params:
+        {
+          base: this.from,
+          target: this.to,
+          apikey: process.env.CURRENCYSTACK_API,
+        },
+    });
     return data.rates[this.to];
   }
 

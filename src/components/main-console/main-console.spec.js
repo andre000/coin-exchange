@@ -43,7 +43,7 @@ describe('Main Console class', () => {
 
   it('should have an function to correctly format the result value', () => {
     const money = MainConsole.format(5.5, 'BRL');
-    expect(money).toBe('R$5.50');
+    expect(money).toMatch(/R\$.5\.50/);
   });
 
   it('should treat format when converting to BTC', () => {
