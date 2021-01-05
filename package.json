@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.4.5",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "chalk": "^2.4.2",
     "dinero.js": "^1.6.0",
     "dotenv": "^8.0.0",
